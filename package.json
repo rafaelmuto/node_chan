@@ -1,0 +1,24 @@
+{
+  "name": "node_chan",
+  "version": "1.0.0",
+  "description": "node.js/express powered image board",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelmuto/node_chan.git"
+  },
+  "keywords": [
+    "image",
+    "board",
+    "node.js"
+  ],
+  "author": "rafaelmuto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelmuto/node_chan/issues"
+  },
+  "homepage": "https://github.com/rafaelmuto/node_chan#readme"
+}
