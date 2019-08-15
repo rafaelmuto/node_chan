@@ -4,14 +4,17 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="/css/main.css") 
         title node_chan view
     body
-        h1 ᶘ ᵒᴥᵒᶅ node_chan
-        form(action="/upload" method="POST" enctype="multipart/form-data")
-            label(for="userName") user:
-            input(type="text" name="userName")
-            label(for="postMessage") message:
-            input(type="text" name="postMessage")
-            label(for="postImage") image:
-            input(type="file" name="postImage")
-            button( type="submit") upload
+        div.main
+             h1 ᶘ ᵒᴥᵒᶅ node_chan
+             hr
+             form(action="/upload" method="POST" enctype="multipart/form-data")
+                label(for="userName") user:
+                input(type="text" name="userName")
+                label(for="postMessage") message:
+                textarea(name="postMessage", cols="30", rows="10")
+                label(for="postImage") image:
+                input(type="file" name="postImage")
+                button( type="submit") upload
