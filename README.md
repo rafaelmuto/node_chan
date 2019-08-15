@@ -1,4 +1,4 @@
-# ᶘ ᵒᴥᵒᶅ node_chan WIP
+# ᶘ ᵒᴥᵒᶅ node_chan
 
 a node.js/express/mongoDB powered image board ʕ•ᴥ•ʔ
 

@@ -24,7 +24,8 @@ html(lang="en")
             each post in posts
                 p #{post._id} @ #{post.date} by #{post.username}
                 p message: #{post.message}
-                img(src="images/thumbnails/" + post.image.fileName)
+                a(href="images/"+post.image.fileName)
+                    img(src="images/thumbnails/" + post.image.fileName)
                 hr
         else 
             p 【・ヘ・?】no posts...

@@ -4,7 +4,6 @@ exports.getIndex = (req, res, nxt) => {
   postModel
     .find()
     .then(posts => {
-      console.log(posts);
       return res.render('main', {
         posts: posts
       });
@@ -17,8 +16,6 @@ exports.getIndex = (req, res, nxt) => {
 };
 
 exports.postImage = async (req, res, nxt) => {
-  console.log(req.file);
-
   let filename = 'none';
   let originalname = 'none';
 
