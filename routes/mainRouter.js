@@ -2,6 +2,7 @@ const express = require('express');
 
 const mainController = require('../controllers/mainController');
 const upload = require('../middlewares/uploadMiddleware');
+const resize = require('../middlewares/resizeMiddleware');
 
 const router = express.Router();
 
