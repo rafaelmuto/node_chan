@@ -1,5 +1,3 @@
-const sharp = require('sharp');
-
 const postModel = require('../models/postModel');
 
 exports.getIndex = (req, res, nxt) => {
@@ -13,21 +11,9 @@ exports.postImage = async (req, res, nxt) => {
   let filename = 'none';
   let originalname = 'none';
 
-  const resize = async () => {
-    const thumbPath = 'public/images/thumbnails/' + req.file.filename;
-
-    await sharp('public/images/' + req.file.filename)
-      .resize(300, 300, {
-        fit: sharp.fit.inside,
-        withoutEnlargement: true
-      })
-      .toFile(thumbPath);
-  };
-
   if (req.file) {
     filename = req.file.filename;
     originalname = req.file.originalname;
-    await resize();
   }
 
   const newPost = new postModel({

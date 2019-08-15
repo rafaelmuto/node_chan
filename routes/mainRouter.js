@@ -8,6 +8,6 @@ const router = express.Router();
 
 router.get('/', mainController.getIndex);
 
-router.post('/upload', upload.single('postImage'), mainController.postImage);
+router.post('/upload', upload.single('postImage'), resize, mainController.postImage);
 
 module.exports = router;

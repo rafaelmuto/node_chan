@@ -22,9 +22,6 @@ const postSchema = new mongoose.Schema({
     },
     fileName: {
       type: String
-    },
-    thumbnail: {
-      type: String
     }
   }
 });
