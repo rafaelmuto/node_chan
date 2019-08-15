@@ -6,12 +6,21 @@ exports.getIndex = (req, res, nxt) => {
 };
 
 exports.postImage = (req, res, nxt) => {
+  let filename = 'none';
+  let originalname = 'none';
+
+  if (req.file) {
+    filename = req.file.filename;
+    originalname = req.file.originalname;
+  }
+
   const newPost = new postModel({
     username: req.body.userName,
+    ip: req.ip,
     message: req.body.postMessage,
     image: {
-      originalName: req.file.originalname,
-      fileName: req.file.filename,
+      originalName: originalname,
+      fileName: filename,
       thumbnail: 'none'
     }
   });
