@@ -1,8 +1,19 @@
 const postModel = require('../models/postModel');
 
 exports.getIndex = (req, res, nxt) => {
-  console.log(req.ip);
-  res.render('main');
+  postModel
+    .find()
+    .then(posts => {
+      console.log(posts);
+      return res.render('main', {
+        posts: posts
+      });
+    })
+    .catch(err => {
+      const error = new Error(err);
+      error.statusCode = 500;
+      return nxt(error);
+    });
 };
 
 exports.postImage = async (req, res, nxt) => {
