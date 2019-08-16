@@ -10,4 +10,6 @@ router.get('/', mainController.getIndex);
 
 router.post('/upload', upload.single('postImage'), resize, mainController.postImage);
 
+router.get('/config', mainController.getConfig);
+
 module.exports = router;

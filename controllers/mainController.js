@@ -3,8 +3,10 @@ const postModel = require('../models/postModel');
 exports.getIndex = (req, res, nxt) => {
   postModel
     .find()
+    .sort('-date')
     .then(posts => {
       return res.render('main', {
+        pageTitle: 'node_chan',
         posts: posts
       });
     })
@@ -38,5 +40,11 @@ exports.postImage = async (req, res, nxt) => {
   newPost.save().then(result => {
     console.log('-> post added:', newPost._id);
     return res.redirect('/');
+  });
+};
+
+exports.getConfig = (req, res, nxt) => {
+  res.render('config', {
+    pageTitle: 'node_chan: config'
   });
 };
