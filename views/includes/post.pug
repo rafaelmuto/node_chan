@@ -1,0 +1,5 @@
+div.post
+    p #{post._id} @ #{post.date} by #{post.username}
+    p message: #{post.message}
+    a(href="images/"+post.image.fileName)
+        img(src="images/thumbnails/" + post.image.fileName)

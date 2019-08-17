@@ -16,13 +16,8 @@ block content
             input(type="file" name="postImage")
             button( type="submit") upload
     br
-    hr
     if posts.length > 0
         each post in posts
-            p #{post._id} @ #{post.date} by #{post.username}
-            p message: #{post.message}
-            a(href="images/"+post.image.fileName)
-                img(src="images/thumbnails/" + post.image.fileName)
-            hr
+            include ./includes/post.pug
     else 
         p 【・ヘ・?】no posts...

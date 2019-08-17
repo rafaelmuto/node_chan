@@ -5,6 +5,15 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(rel="stylesheet", href="/css/main.css") 
+        style( media="screen", type="text/css").
+            :root {
+                --color_background: #fff;
+                --color_border: #000;
+                --color_text: #000;
+                --color_post_even: #bdc3c7;
+                --color_post_odd: #ecf0f1;
+                --color_acsent: #e74c3c;
+            }
         title #{pageTitle}
     body
         block content

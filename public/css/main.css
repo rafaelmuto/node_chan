@@ -1,15 +1,17 @@
 * {
   box-sizing: border-box;
   font-family: monospace;
+  color: var(--color_text);
+  background-color: var(--color_background);
 }
 
 .main {
   margin: 0 auto;
   padding: 0 1rem;
   padding-bottom: 0.5rem;
-  border: 1px solid black;
+  border: 1px solid var(--color_border);
   border-radius: 5px;
-  box-shadow: 2px 2px 0 black;
+  box-shadow: 2px 2px 0 var(--color_border);
   width: 500px;
 }
 
@@ -24,9 +26,25 @@ textarea {
   text-align: center;
   width: 100%;
   margin: 0.5rem 0;
-  border: 1px solid black;
+  background-color: var(--color_acsent);
+  border: 1px solid var(--color_border);
   border-radius: 2px;
-  box-shadow: 2px 2px 0 black;
+  box-shadow: 2px 2px 0 var(--color_border);
+}
+
+.post {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px dashed var(--color_border);
+  border-radius: 5px;
+}
+
+.post:nth-child(odd) {
+  background-color: var(--color_post_odd);
+}
+
+.post:nth-child(even) {
+  background-color: var(--color_post_even);
 }
 
 @media (max-with: 500px) {
