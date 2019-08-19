@@ -11,6 +11,7 @@ const morgan = require('morgan');
 
 const mainRouter = require('./routes/mainRouter');
 const errController = require('./controllers/errController');
+const theme = require('./middlewares/themeMiddleware');
 
 // ==> initializing express and others:
 const app = express();
@@ -23,6 +24,8 @@ app.use(morgan('combined', { stream: accessLogStream }));
 
 // setting up view engine
 app.set('view engine', 'pug');
+
+app.use(theme);
 
 app.use(mainRouter);
 app.use(express.static('public'));

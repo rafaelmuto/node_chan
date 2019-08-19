@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
   username: {
-    type: String,
-    default: 'annon'
+    type: String
   },
   ip: {
     type: String,

@@ -7,12 +7,12 @@ html(lang="en")
         link(rel="stylesheet", href="/css/main.css") 
         style( media="screen", type="text/css").
             :root {
-                --color_background: #fff;
-                --color_border: #000;
-                --color_text: #000;
-                --color_post_even: #bdc3c7;
-                --color_post_odd: #ecf0f1;
-                --color_acsent: #e74c3c;
+                --color_background: #{theme.color_background};
+                --color_border: #{theme.color_border};
+                --color_text: #{theme.color_text};
+                --color_post_even: #{theme.color_post_even};
+                --color_post_odd: #{theme.color_post_odd};
+                --color_acsent: #{theme.color_acsent};
             }
         title #{pageTitle}
     body
