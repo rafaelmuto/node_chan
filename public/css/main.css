@@ -39,6 +39,10 @@ textarea {
   border-radius: 5px;
 }
 
+.post p {
+  background-color: transparent;
+}
+
 .post:nth-child(odd) {
   background-color: var(--color_post_odd);
 }
