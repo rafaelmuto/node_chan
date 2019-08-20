@@ -28,12 +28,13 @@ exports.postImage = async (req, res, nxt) => {
 
   const newPost = new postModel({
     username: req.body.userName,
+    email: req.body.email,
+    deleteCode: req.body.deleteCode,
     ip: req.ip,
     message: req.body.postMessage,
     image: {
       originalName: originalname,
-      fileName: filename,
-      thumbnail: 'none'
+      fileName: filename
     }
   });
 

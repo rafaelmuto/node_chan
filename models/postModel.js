@@ -4,6 +4,12 @@ const postSchema = new mongoose.Schema({
   username: {
     type: String
   },
+  email: {
+    type: String
+  },
+  deleteCode: {
+    type: String
+  },
   ip: {
     type: String,
     required: true
