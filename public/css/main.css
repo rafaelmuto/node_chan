@@ -1,4 +1,4 @@
-* {
+body {
   box-sizing: border-box;
   font-family: monospace;
   color: var(--color_text);
@@ -33,13 +33,29 @@ textarea {
 }
 
 .post {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0.3rem;
   border: 1px dashed var(--color_border);
-  border-radius: 5px;
+  border-radius: 1px;
+  display: grid;
+  grid-template-rows: 0.9rem auto;
+}
+
+.postHead {
+  font-size: 0.8rem;
+}
+
+.postBody {
+  margin: 0.2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.postBody img {
+  width: 12rem;
 }
 
 .post p {
+  margin: 0 0 0 0.5rem;
   background-color: transparent;
 }
 
