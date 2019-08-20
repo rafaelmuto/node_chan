@@ -71,4 +71,8 @@ textarea {
   .main {
     width: 90%;
   }
+
+  .post {
+    grid-template-rows: auto auto;
+  }
 }

@@ -4,17 +4,17 @@ block content
             h1 ᶘ ᵒᴥᵒᶅ node_chan
             hr
             form(action="/upload" method="POST" enctype="multipart/form-data")
-            label(for="userName") user:
-            input(type="text" name="userName")
-            label(for="email") e-mail:
-            input(type="email" name="email")
-            label(for="deleteCode") delete code:
-            input(type="password", name="deleteCode")
-            label(for="postMessage") message:
-            textarea(name="postMessage", cols="30", rows="10")
-            label(for="postImage") image:
-            input(type="file" name="postImage")
-            button( type="submit") upload
+                label(for="userName") user:
+                input(type="text" name="userName")
+                label(for="email") e-mail:
+                input(type="email" name="email")
+                label(for="deleteCode") delete code:
+                input(type="password", name="deleteCode")
+                label(for="postMessage") message:
+                textarea(name="postMessage", cols="30", rows="10")
+                label(for="postImage") image:
+                input(type="file" name="postImage")
+                button(type="submit") upload
     br
     if posts.length > 0
         each post in posts
