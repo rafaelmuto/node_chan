@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('combined', { stream: accessLogStream }));
 
-// setting up view engine
+// ==> setting up view engine
 app.set('view engine', 'pug');
 
 app.use(theme);
