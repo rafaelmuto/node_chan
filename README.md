@@ -12,8 +12,8 @@ It runs in node.js/express and uses a mongoDB database.
 in no particular order...
 
 - thread model (has many posts)
-- implement config 'working on it!'
-- display grid in post list 'kinda working, but not there yet...'
+- implement config `working on it!`
+- display grid in post list `kinda working, but not there yet...`
 - color themes
 - delete and edit posts with delete code
 - respond post; nested in the orginial post
