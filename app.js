@@ -25,8 +25,6 @@ app.use(morgan('combined', { stream: accessLogStream }));
 // ==> setting up view engine
 app.set('view engine', 'pug');
 
-app.use(theme);
-
 app.use(mainRouter);
 app.use(express.static('public'));
 app.use(errController.err404);
