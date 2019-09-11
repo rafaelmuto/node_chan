@@ -17,7 +17,7 @@ exports.getIndex = (req, res, nxt) => {
     });
 };
 
-exports.postImage = async (req, res, nxt) => {
+exports.postPost = async (req, res, nxt) => {
   let filename = 'none';
   let originalname = 'none';
 
@@ -38,10 +38,17 @@ exports.postImage = async (req, res, nxt) => {
     }
   });
 
-  newPost.save().then(result => {
-    console.log('-> post added:', newPost._id);
-    return res.redirect('/');
-  });
+  newPost
+    .save()
+    .then(result => {
+      console.log('-> post added:', newPost._id);
+      return res.redirect('/');
+    })
+    .catch(err => {
+      const error = new Error(err);
+      error.statusCode = 500;
+      return nxt(error);
+    });
 };
 
 exports.getConfig = (req, res, nxt) => {
@@ -49,3 +56,5 @@ exports.getConfig = (req, res, nxt) => {
     pageTitle: 'node_chan: config'
   });
 };
+
+exports.postConfig = (req, res, nxt) => {};
