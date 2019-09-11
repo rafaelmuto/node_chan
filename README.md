@@ -12,8 +12,8 @@ It runs in node.js/express and uses a mongoDB database.
 in no particular order...
 
 - thread model (has many posts)
-- implement config
-- display grid in post list
+- implement config 'working on it!'
+- display grid in post list 'kinda working, but not there yet...'
 - color themes
 - delete and edit posts with delete code
 - respond post; nested in the orginial post
@@ -23,4 +23,5 @@ in no particular order...
 ## future:
 
 - REST api for quoting posts
-- update to a MERN stack...
+- update to a MERN stack...?
+- maybe vue...
