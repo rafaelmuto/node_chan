@@ -1,4 +1,5 @@
 const postModel = require('../models/postModel');
+const config = require('../models/configModel');
 
 exports.getIndex = (req, res, nxt) => {
   postModel
@@ -6,7 +7,6 @@ exports.getIndex = (req, res, nxt) => {
     .sort('-date')
     .then(posts => {
       return res.render('main', {
-        pageTitle: 'node_chan',
         posts: posts
       });
     })
@@ -53,8 +53,24 @@ exports.postPost = async (req, res, nxt) => {
 
 exports.getConfig = (req, res, nxt) => {
   res.render('config', {
-    pageTitle: 'node_chan: config'
+    pageTitle: 'node_chan config'
   });
 };
 
-exports.postConfig = (req, res, nxt) => {};
+exports.postConfig = (req, res, nxt) => {
+  // why is it not deleteing???
+  config.findOneAndRemove();
+
+  new config({
+    boardName: req.body.boardName
+  })
+    .save()
+    .then(result => {
+      return res.redirect('/');
+    })
+    .catch(err => {
+      const error = new Error(err);
+      error.statusCode = 500;
+      return nxt(error);
+    });
+};

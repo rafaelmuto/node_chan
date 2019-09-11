@@ -1,7 +1,7 @@
 extend ./layouts/mainLayout.pug
 block content
     div.main
-            h1 ᶘ ᵒᴥᵒᶅ node_chan
+            h1 #{pageTitle}
             hr
             form(action="/upload" method="POST" enctype="multipart/form-data")
                 label(for="userName") user:

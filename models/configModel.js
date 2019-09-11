@@ -9,27 +9,27 @@ const configSchema = new mongoose.Schema({
     colors: {
       background: {
         type: String,
-        required: true
+        required: false
       },
       border: {
         type: String,
-        required: true
+        required: false
       },
       text: {
         type: String,
-        required: true
+        required: false
       },
       postOdd: {
         type: String,
-        required: true
+        required: false
       },
       postEven: {
         type: String,
-        required: true
+        required: false
       },
       acsent: {
         type: String,
-        required: true
+        required: false
       }
     }
   }

@@ -1,6 +1,8 @@
 const config = require('../models/configModel');
 
 const theme = (req, res, nxt) => {
+  res.locals.pageTitle = 'ᶘ ᵒᴥᵒᶅ node_chan...';
+
   res.locals.theme = {
     color_background: '#fff',
     color_border: '#000',
@@ -10,7 +12,15 @@ const theme = (req, res, nxt) => {
     color_acsent: '#e74c3c'
   };
 
-  return nxt();
+  config
+    .findOne()
+    .sort('-_id')
+    .then(conf => {
+      if (conf !== null) {
+        res.locals.pageTitle = conf.boardName;
+      }
+      return nxt();
+    });
 };
 
 module.exports = theme;
