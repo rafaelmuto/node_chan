@@ -1,6 +1,7 @@
 div.post
     p.postHead >>> #{post._id} @ #{post.date} by #{post.username}
     div.postBody
-        a(href="images/"+post.image.fileName)
-            img(src="images/thumbnails/" + post.image.fileName)
+        if post.image.fileName != 'none'
+            a(href="images/"+post.image.fileName)
+                img(src="images/thumbnails/" + post.image.fileName)
         p message: #{post.message}
